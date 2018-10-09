@@ -12,6 +12,7 @@ import { environment } from '../environments/environment';
 // componentes
 import { AppComponent } from './app.component';
 import { ChatComponent } from './components/chat/chat.component';
+import { LoginComponent } from './components/login/login.component';
 
 // servicios
 import { ChatService } from '../app/providers/chat.service';
@@ -20,7 +21,8 @@ import { ChatService } from '../app/providers/chat.service';
 @NgModule({
   declarations: [
     AppComponent,
-    ChatComponent
+    ChatComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
