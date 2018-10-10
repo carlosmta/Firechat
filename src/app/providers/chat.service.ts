@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { auth } from 'firebase/app';
+// import { auth } from 'firebase/app';
+import * as firebase from 'firebase';
 // tslint:disable-next-line:import-blacklist
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
@@ -31,7 +32,7 @@ export class ChatService {
     }
 
   login(proveedor: string) {
-      this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+      this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
 
   logout() {
